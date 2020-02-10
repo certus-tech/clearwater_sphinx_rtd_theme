@@ -58,7 +58,7 @@
             {% else %}
               <a href="https://{{ gitlab_host|default("gitlab.com") }}/{{ gitlab_user }}/{{ gitlab_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ gitlab_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-gitlab"> {{ _('Edit on GitLab') }}</a>
             {% endif %}
-          {% elif theme_common_gitlab == True %}
+          {% elif theme_common_gitlab == 'true' %}
             {# 'Common' gitlab URL generates a link for every RST file. Settings to be place in theme.conf. #}
             <a href="{{ theme_common_gitlab_path }}/{{ pagename }}{{ suffix }}" class="fa fa-gitlab"> {{ _('Edit on GitLab') }}</a>
           {% elif show_source and source_url_prefix %}
