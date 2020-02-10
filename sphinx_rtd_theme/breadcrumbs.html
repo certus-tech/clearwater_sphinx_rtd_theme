@@ -66,6 +66,10 @@
           {% elif show_source and has_source and sourcename %}
             <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow"> {{ _('View page source') }}</a>
           {% endif %}
+          {# Assume all 'index' pages will have a PDF at the root of the site. #}
+          {% if pagename.endswith('index') %}
+            <a href="/{{ project }}{{ pagename.replace('index','').replace('/','') }}.pdf" class="fa fa-download"> {{ _('PDF') }}</a>
+          {% endif %}
         {% endif %}
       </li>
     {% endblock %}
