@@ -26,7 +26,8 @@
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   {# JAVASCRIPTS #}
   {%- block scripts %}
   <!--[if lt IE 9]>
@@ -141,7 +142,6 @@
           {% endif %}
 
           {% include "searchbox.html" %}
-
           {% endblock %}
         </div>
 
@@ -165,6 +165,9 @@
               <div class="local-toc">{{ toc }}</div>
             {% endif %}
           {% endblock %}
+        </div>
+        <div class="wy-menu-footer">
+          <a href="https://www.certus-tech.com/clearwater"><img src="{{ pathto('_static/Clearwater_50.png', 1) }}" class="wy-menu-footer-logo" alt="{{ _('Logo') }}"/></a>
         </div>
         {% endblock %}
       </div>

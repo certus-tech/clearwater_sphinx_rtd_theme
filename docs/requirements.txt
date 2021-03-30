@@ -1,2 +1,4 @@
-sphinx
-sphinxcontrib-httpdomain
+# File: docs/requirements.txt
+
+sphinx==3.4.3
+sphinx_rtd_theme==0.4.3
